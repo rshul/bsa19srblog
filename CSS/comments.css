@@ -1,0 +1,20 @@
+/* comment*/
+
+.comments{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+}
+
+.comment-card{
+  display: flex;
+  align-items: center;
+  border: solid 1px #dedede;
+  border-radius: 5px;
+  padding: 10px;
+}
+.comment-card img{
+  max-width: 50px;
+  flex: 1;
+  margin-right: 20px;
+}

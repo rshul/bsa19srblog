@@ -5,14 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="CSS\Colors.css" rel="stylesheet">
+    <link href="CSS\Common.css" rel="stylesheet">
+
+
     <link href="CSS\main.css" rel="stylesheet">
+    <link href="CSS\asiderest.css" rel="stylesheet">
+<link href="CSS\comments.css" rel="stylesheet">
+<link href="CSS\humburger.css" rel="stylesheet">
+<link href="CSS\post.css" rel="stylesheet">
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Trevel blog</title>
 
 </head>
 
 <body>
-    <header >
+    <header>
         <div class="header-center">
             <!-- logo -->
             <div class="logo">
@@ -33,11 +44,11 @@
 
             <nav class="menu" role="navigation">
                 <div id="menuToggle">
-                    <input type="checkbox" >
+                    <input type="checkbox">
                     <span></span>
                     <span></span>
                     <span></span>
-                    
+
                     <ul id="menu">
                         <a class="menu-home" href="#">Home</a>
                         <a class="menu-about" href="#">About</a>
@@ -49,20 +60,178 @@
     </header>
 
     <aside class="aside-info">
-        aside info
+        <div class="about">
+            <img src="Img\nomadic-matt-01.jpg" alt="Img\nomadic-matt-01">
+            <h4>Matt Kepnes</h4>
+            <p class="about-desc"> The short version of my story is that I grew up in the Boston
+                area and went to school to be a high school history teacher. I ended up taking
+                a job at a hospital doing administrative work while I tried to find a teaching
+                job and ended up there for three years. I hated the job and found it really
+                mundane and boring. I mean my co-workers were nice but the job itself was
+                awful.</p>
+        </div>
+
     </aside>
 
     <main>
-        Main
+
+        <div class="card">
+            <div class="imghover-zoom">
+                <img src="Img\homepage-travel-tips.jpg" alt="Img\homepage-travel-tips">
+            </div>
+            <h4>After 9 Years Traveling The World</h4>
+            <div class="desc">
+                <p>My traveling started when I quit my job and took a one-way
+                    flight from Miami to Guatemala, leaping nervously into the unknown and leaving much of my
+                </p>
+
+            </div>
+            <div class="post-info">
+                <span class="star">&#x2605;&#x2605;</span>
+                <span class="comment">&#x1f4ac; 4</span>
+                <span class="calendar">&#x1f4c5; March 12, 2019<span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imghover-zoom">
+                <img src="Img\homepage-travel-tips.jpg" alt="Img\homepage-travel-tips">
+            </div>
+            <h4>After 9 Years Traveling The World</h4>
+            <div class="desc">
+                <p>My traveling started when I quit my job and took a one-way
+                    flight from Miami to Guatemala, leaping nervously into the unknown and leaving much of my
+                </p>
+
+            </div>
+            <div class="post-info">
+                <span class="star">&#x2605;&#x2605;</span>
+                <span class="comment">&#x1f4ac; 4</span>
+                <span class="calendar">&#x1f4c5; March 12, 2019<span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imghover-zoom">
+                <img src="Img\homepage-travel-tips.jpg" alt="Img\homepage-travel-tips">
+            </div>
+            <h4>After 9 Years Traveling The World</h4>
+            <div class="desc">
+                <p>My traveling started when I quit my job and took a one-way
+                    flight from Miami to Guatemala, leaping nervously into the unknown and leaving much of my
+                </p>
+
+            </div>
+            <div class="post-info">
+                <span class="star">&#x2605;&#x2605;</span>
+                <span class="comment">&#x1f4ac; 4</span>
+                <span class="calendar">&#x1f4c5; March 12, 2019<span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imghover-zoom">
+                <img src="Img\homepage-travel-tips.jpg" alt="Img\homepage-travel-tips">
+            </div>
+            <h4>After 9 Years Traveling The World</h4>
+            <div class="desc">
+                <p>My traveling started when I quit my job and took a one-way
+                    flight from Miami to Guatemala, leaping nervously into the unknown and leaving much of my
+                </p>
+
+            </div>
+            <div class="post-info">
+                <span class="star">&#x2605;&#x2605;</span>
+                <span class="comment">&#x1f4ac; 4</span>
+                <span class="calendar">&#x1f4c5; March 12, 2019<span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imghover-zoom">
+                <img src="Img\homepage-travel-tips.jpg" alt="Img\homepage-travel-tips">
+            </div>
+            <h4>After 9 Years Traveling The World</h4>
+            <div class="desc">
+                <p>My traveling started when I quit my job and took a one-way
+                    flight from Miami to Guatemala, leaping nervously into the unknown and leaving much of my
+                </p>
+
+            </div>
+            <div class="post-info">
+                <span class="star">&#x2605;&#x2605;</span>
+                <span class="comment">&#x1f4ac; 4</span>
+                <span class="calendar">&#x1f4c5; March 12, 2019<span>
+            </div>
+        </div>
+
     </main>
 
     <aside class="aside-rest">
-        aside rest
+        <div class="social-icons">
+            <i class="fa fa-facebook-square"></i>
+            <i class="fa fa-twitter-square"> </i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-youtube"> </i>
+        </div>
+        <div class="forms">
+            <form class="subscribe">
+                <h3>Subscribe</h3>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <button type="button">Subscribe</button>
+            </form>
+            <div class="search">
+                <h3>Search</h3>
+                <form class="search-form">
+                    <input class="sinput" type="search" placeholder="Search">
+                    <button class="sbut" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="tags">
+            <span>hiking</span>
+            <span>Travel tips</span>
+            <span>Driving</span>
+            <span>Helicopter Adventure</span>
+            <span>Planning to visit Mexico</span>
+            <span>Epic Mountain Views</span>
+            <span>Renting A Car In Italy</span>
+            <span>Best Travel Backpacks Review</span>
+            <span>all-inclusive resort</span>
+        </div>
+        <div class="comments">
+            <div class="comment-card">
+<img src="Img\050cfc5c933a86c4c38b9057ff065865.png" alt="ImgComment">
+                <div class="comment-info">
+                    <div class="name">
+                        <strong>Aaron Salyer</strong>
+                    </div>
+                    <div class="comment-desc">
+                        Great post! Thanks.
+                        We are actually planning to go to
+                         playa del carmen in June/July.
+                    </div>
+                </div>
+            </div>
+
+            <div class="comment-card">
+                <img src="Img\9ab5265c9b1bd484a6002a1c3e90b6ad.jpeg" alt="IgmComment">
+                <div class="comment-info">
+                    <div class="name">
+                        <strong>Matthew Karsten</strong>
+                    </div>
+                    <div class="comment-desc">
+                        Hi Robert! I don’t know anything
+                        about Royal Hideaway. Playacar has a great beach though.
+                    </div>
+                </div>
+            </div>
+        </div>
     </aside>
 
 
     <footer>
-        footer
+        <div class="footer-container">
+            <p class="copyright"> Copyright &#169; 2019 Travelling blog </p>
+        </div>
     </footer>
 
 </body>
