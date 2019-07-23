@@ -1,35 +1,18 @@
-:root {
-    --blue-light: #88BDBC;
-    --blue-middle: #254E58;
-    --blue-dark: #112D32;
-    --grey-dark: #4F4A41;
-    --grey-light: #636658;
-}
-
-html, body {
-    height: 100%;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 body {
     display: grid;
     grid-template:
-        "header  header  header  header  header      header  "minmax(100px, auto)
-         "   .    main    main    main    aside-info    .      "3fr
-         "   .    main    main    main    aside-rest    .      "6fr
-          "footer  footer  footer  footer  footer       footer  "1fr
-          / 1fr minmax(auto, 300px) minmax(auto, 300px) minmax(auto, 300px) minmax(auto, 300px) 1fr;
+        "header  header  header  header  header      header  "minmax(150px, auto)
+         "   .    main    main    main    aside-info    .      "auto
+         "   .    main    main    main    aside-rest    .      "auto
+         "footer  footer  footer  footer  footer       footer  "1fr
+         / 1fr minmax(auto, 300px) minmax(auto, 300px) minmax(auto, 300px) minmax(auto, 300px) 1fr;
 }
 
 header {
     grid-area: header;
     display: grid;
     grid-template:
-        ". hcenter hcenter hcenter hcenter ."minmax(100px, auto)
-         / 1fr minmax(auto, 300px) minmax(auto, 300px) minmax(auto, 300px) minmax(auto, 300px) 1fr;
+        ". hcenter hcenter hcenter hcenter ."minmax(100px, auto) / 1fr minmax(auto, 300px) minmax(auto, 300px) minmax(auto, 300px) minmax(auto, 300px) 1fr;
     justify-content: center;
 }
 
@@ -52,9 +35,7 @@ header .header-center {
     background-color: var(--blue-light);
     display: grid;
     grid-template:
-        " .    logo    .         search  social  . "20px
-         " .    logo    menu      menu    menu    . "100px
-          / 1fr minmax(auto, 300px) minmax(auto, 300px) minmax(auto, 300px) minmax(auto, 300px) 1fr;
+        " .    logo    .         search  social  . "20px " .    logo    menu      menu    menu    . "100px / 1fr minmax(auto, 300px) minmax(auto, 300px) minmax(auto, 300px) minmax(auto, 300px) 1fr;
 }
 
 /* logo */
@@ -72,6 +53,7 @@ header .header-center {
     display: inline-block;
     margin-right: 1.2rem;
 }
+
 .social-icons .fa:hover {
     color: var(--blue-dark);
 }
@@ -98,10 +80,9 @@ header .header-center {
     color: black;
 }
 
-.menu a:hover{
+.menu a:hover {
     color: var(--blue-dark);
 }
-
 
 aside.aside-info {
     grid-area: aside-info;
@@ -114,170 +95,19 @@ aside.aside-rest {
 }
 
 
-#menuToggle input {
-    display: none;
+
+/* footer */
+.footer-container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: var(--blue-light);
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
 }
-
-
-@media screen and (max-width : 768px) {
-
-
-    body {
-        display: grid;
-        grid-template:
-            "header  " 200px
-            "aside-info"
-            "main"
-            "aside-rest"
-            "footer";
-    }
-
-    header .header-center {
-        padding: 1rem;
-        border: 1px solid black;
-        background-color: var(--blue-light);
-        display: grid;
-        grid-template:
-        " . menu search"
-        " . logo . " minmax(auto, 100px);
-        justify-content: space-between;
-
-
-    }
-
-    .social-icons {
-        display: none;
-    }
-
-
-}
-
-
-@media screen and (max-width : 768px) {
-
-    /* hubmburger css */
-    #menuToggle {
-        display: block;
-        position: relative;
-        top: 0px;
-        left: -50vw;
-        z-index: 1;
-        -webkit-user-select: none;
-        user-select: none;
-    }
-
-    #menuToggle input {
-        display: block;
-        width: 40px;
-        height: 32px;
-        position: absolute;
-        top: -7px;
-        left: -5px;
-        cursor: pointer;
-        opacity: 0;
-        /* hide this */
-        z-index: 2;
-        /* and place it over the hamburger */
-        -webkit-touch-callout: none;
-    }
-
-
-    /*
- * Just a quick hamburger
- */
-    #menuToggle span {
-        display: block;
-        width: 33px;
-        height: 4px;
-        margin-bottom: 5px;
-        position: relative;
-        background: #cdcdcd;
-        border-radius: 3px;
-        z-index: 1;
-        transform-origin: 4px 0px;
-        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-            opacity 0.55s ease;
-    }
-
-    #menuToggle span:first-child {
-        transform-origin: 0% 0%;
-    }
-
-    #menuToggle span:nth-last-child(2) {
-        transform-origin: 0% 100%;
-    }
-
-    /*
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-    #menuToggle input:checked~span {
-        opacity: 1;
-        transform: rotate(45deg) translate(-2px, -1px);
-        background: #232323;
-    }
-
-    /*
- * But let's hide the middle one.
- */
-    #menuToggle input:checked~span:nth-last-child(3) {
-        opacity: 0;
-        transform: rotate(0deg) scale(0.2, 0.2);
-    }
-
-    /*
- * Ohyeah and the last one should go the other direction
- */
-    #menuToggle input:checked~span:nth-last-child(2) {
-        transform: rotate(-45deg) translate(0, -1px);
-    }
-#menuToggle input:checked~#menu{
-    opacity:1;
-
-}
-    /*
- * Make this absolute positioned
- * at the top left of the screen
- */
-    #menu {
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        margin: -100px 0 0 -71px;
-        padding: 50px;
-        padding-top: 125px;
-        background: #ededed;
-
-        background-color: var(--blue-light);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        list-style-type: none;
-        -webkit-font-smoothing: antialiased;
-        opacity:0;
-        /* to stop flickering of text in safari */
-        transform-origin: 0% 0%;
-        transform: translate(-100%, 0);
-        transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-        transition: transform 0.9s cubic-bezier(0.77, 0.2, 0.05, 1.0) ;
-    }
-
-.menu a{
-    font-size: 2rem;
-}
-
-
-    #menu li {
-        padding: 10px 0;
-        font-size: 22px;
-    }
-
-    /*
- * And let's slide it in from the left
- */
-    #menuToggle input:checked~ul {
-        transform: none;
-    }
+.copyright{
+    text-align: center;
 }

@@ -1,0 +1,72 @@
+/* post---------------- */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.card {
+    max-width: 100%;
+    min-height: 400px;
+    border: 1px solid black;
+}
+
+.imghover-zoom {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    transition: transform .5s ease;
+    overflow: hidden;
+}
+
+.imghover-zoom img {
+    max-width: 100%;
+    height: auto;
+    transition: all 0.3s;
+    display: block;
+    transform: scale(1);
+}
+
+.imghover-zoom img:hover {
+    transform: scale(1.5);
+}
+
+.card h2 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.desc {
+    max-height: 100px;
+    max-width: 300px;
+    font-size: 0.8rem;
+    overflow: hidden;
+}
+
+.post-info span {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.star {
+    color: rgb(198, 126, 18);
+}
+
+/* aside */
+.about p {
+    padding: 5px;
+}
+
+.about h4 {
+    text-align: center;
+}
+
+.about img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
